@@ -22,9 +22,9 @@ const leftLinks = [
 ];
 
 export function Navbar() {
-  const{ data: session, } = authClient.useSession()
+  const { data: session, } = authClient.useSession()
   const user = session?.user
-const router = useRouter()
+  const router = useRouter()
   const handleSignOut = () => {
     authClient.signOut()
     router.push('/')
@@ -65,10 +65,19 @@ const router = useRouter()
 
         {
           user ? <Popover>
-            <PopoverTrigger render={<Avatar>
-              <AvatarImage referrerPolicy="no-referrer" src={user?.image as string} />
-              <AvatarFallback>{user?.name.charAt(0)}</AvatarFallback>
-            </Avatar>}>
+            <PopoverTrigger
+              render={
+                <button type="button">
+                  <Avatar>
+                    <AvatarImage
+                      referrerPolicy="no-referrer"
+                      src={user?.image as string}
+                    />
+                    <AvatarFallback>{user?.name.charAt(0)}</AvatarFallback>
+                  </Avatar>
+                </button>
+              }
+            >
               Open Popover
             </PopoverTrigger>
             <PopoverContent>
