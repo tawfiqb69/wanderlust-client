@@ -1,5 +1,5 @@
 "use client";
-
+import type { Destination } from "@/lib/mapDestinations";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -16,18 +16,7 @@ import {
 /*  Types                                                                     */
 /* -------------------------------------------------------------------------- */
 
-// What a destination looks like after we clean it up for rendering.
-export type Destination = {
-  name: string;
-  location: string;
-  price: number;
-  duration: string;
-  category: string;
-  rating: number;
-  imageUrl: string;
-  _id: string
 
-};
 
 /* -------------------------------------------------------------------------- */
 /*  Constants                                                                 */

@@ -1,5 +1,5 @@
-import { DestinationsListing, mapDestinations } from "@/components/destinations-listing";
-
+import { DestinationsListing } from "@/components/destinations-listing";
+import { mapDestinations } from "@/lib/mapDestinations";
 
 
 
